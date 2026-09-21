@@ -1,0 +1,1380 @@
+{
+  "global_config": {
+    "num_jobs": 15,
+    "num_jobs_static": 12,
+    "num_jobs_dynamic": 3,
+    "num_ops_per_job": 5,
+    "num_machines": 20,
+    "num_workers": 20,
+    "fatigue_threshold": 0.8,
+    "total_pieces_per_job": 10,
+    "d_operation": 64,
+    "d_worker": 32,
+    "d_batch": 32,
+    "d_global": 128
+  },
+  "machine_static_data": {
+    "machine_0": {
+      "switch_time": 0.31,
+      "energy_idle": 0.02,
+      "energy_switch": 1.97,
+      "energy_process": 4.61
+    },
+    "machine_1": {
+      "switch_time": 0.35,
+      "energy_idle": 0.36,
+      "energy_switch": 1.6,
+      "energy_process": 4.88
+    },
+    "machine_2": {
+      "switch_time": 0.45,
+      "energy_idle": 0.78,
+      "energy_switch": 1.99,
+      "energy_process": 3.72
+    },
+    "machine_3": {
+      "switch_time": 0.42,
+      "energy_idle": 0.05,
+      "energy_switch": 1.71,
+      "energy_process": 4.32
+    },
+    "machine_4": {
+      "switch_time": 0.34,
+      "energy_idle": 0.46,
+      "energy_switch": 1.47,
+      "energy_process": 4.64
+    },
+    "machine_5": {
+      "switch_time": 0.35,
+      "energy_idle": 0.82,
+      "energy_switch": 1.79,
+      "energy_process": 4.21
+    },
+    "machine_6": {
+      "switch_time": 0.33,
+      "energy_idle": 0.51,
+      "energy_switch": 1.64,
+      "energy_process": 4.27
+    },
+    "machine_7": {
+      "switch_time": 0.38,
+      "energy_idle": 0.15,
+      "energy_switch": 1.91,
+      "energy_process": 4.14
+    },
+    "machine_8": {
+      "switch_time": 0.4,
+      "energy_idle": 0.84,
+      "energy_switch": 1.31,
+      "energy_process": 3.9
+    },
+    "machine_9": {
+      "switch_time": 0.34,
+      "energy_idle": 0.12,
+      "energy_switch": 1.13,
+      "energy_process": 4.65
+    },
+    "machine_10": {
+      "switch_time": 0.45,
+      "energy_idle": 0.83,
+      "energy_switch": 1.41,
+      "energy_process": 3.49
+    },
+    "machine_11": {
+      "switch_time": 0.47,
+      "energy_idle": 0.12,
+      "energy_switch": 1.31,
+      "energy_process": 3.35
+    },
+    "machine_12": {
+      "switch_time": 0.33,
+      "energy_idle": 0.48,
+      "energy_switch": 1.31,
+      "energy_process": 3.57
+    },
+    "machine_13": {
+      "switch_time": 0.35,
+      "energy_idle": 0.03,
+      "energy_switch": 1.94,
+      "energy_process": 4.73
+    },
+    "machine_14": {
+      "switch_time": 0.3,
+      "energy_idle": 0.02,
+      "energy_switch": 1.98,
+      "energy_process": 3.95
+    },
+    "machine_15": {
+      "switch_time": 0.31,
+      "energy_idle": 0.3,
+      "energy_switch": 1.9,
+      "energy_process": 3.73
+    },
+    "machine_16": {
+      "switch_time": 0.39,
+      "energy_idle": 0.45,
+      "energy_switch": 1.52,
+      "energy_process": 3.5
+    },
+    "machine_17": {
+      "switch_time": 0.41,
+      "energy_idle": 0.66,
+      "energy_switch": 1.09,
+      "energy_process": 3.45
+    },
+    "machine_18": {
+      "switch_time": 0.42,
+      "energy_idle": 0.41,
+      "energy_switch": 1.45,
+      "energy_process": 3.18
+    },
+    "machine_19": {
+      "switch_time": 0.4,
+      "energy_idle": 0.34,
+      "energy_switch": 1.81,
+      "energy_process": 3.38
+    }
+  },
+  "worker_static_data": {
+    "worker_0": {
+      "lambda": 0.04,
+      "mu": 0.6
+    },
+    "worker_1": {
+      "lambda": 0.05,
+      "mu": 0.6
+    },
+    "worker_2": {
+      "lambda": 0.02,
+      "mu": 0.6
+    },
+    "worker_3": {
+      "lambda": 0.03,
+      "mu": 0.7
+    },
+    "worker_4": {
+      "lambda": 0.02,
+      "mu": 0.5
+    },
+    "worker_5": {
+      "lambda": 0.04,
+      "mu": 0.7
+    },
+    "worker_6": {
+      "lambda": 0.04,
+      "mu": 0.8
+    },
+    "worker_7": {
+      "lambda": 0.03,
+      "mu": 0.8
+    },
+    "worker_8": {
+      "lambda": 0.08,
+      "mu": 0.5
+    },
+    "worker_9": {
+      "lambda": 0.07,
+      "mu": 0.6
+    },
+    "worker_10": {
+      "lambda": 0.05,
+      "mu": 0.8
+    },
+    "worker_11": {
+      "lambda": 0.06,
+      "mu": 0.7
+    },
+    "worker_12": {
+      "lambda": 0.04,
+      "mu": 0.6
+    },
+    "worker_13": {
+      "lambda": 0.05,
+      "mu": 0.5
+    },
+    "worker_14": {
+      "lambda": 0.04,
+      "mu": 0.6
+    },
+    "worker_15": {
+      "lambda": 0.05,
+      "mu": 0.6
+    },
+    "worker_16": {
+      "lambda": 0.07,
+      "mu": 0.6
+    },
+    "worker_17": {
+      "lambda": 0.05,
+      "mu": 0.6
+    },
+    "worker_18": {
+      "lambda": 0.03,
+      "mu": 0.8
+    },
+    "worker_19": {
+      "lambda": 0.05,
+      "mu": 0.7
+    }
+  },
+  "job_operation_static_data": {
+    "job_0": {
+      "op_0": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.9,
+          "9": 1.2,
+          "11": 1.6,
+          "17": 1.2
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.8,
+          "5": 1.7,
+          "7": 2.6,
+          "18": 2.0
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.6,
+          "1": 1.7,
+          "12": 1.1,
+          "13": 2.9
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.9,
+          "6": 3.0,
+          "15": 2.3,
+          "16": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.4,
+          "10": 2.1,
+          "14": 1.3,
+          "19": 2.1
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_1": {
+      "op_0": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.4,
+          "10": 2.3,
+          "14": 1.7,
+          "19": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.7,
+          "9": 1.1,
+          "11": 1.3,
+          "17": 1.6
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.5,
+          "5": 2.5,
+          "7": 1.5,
+          "18": 2.5
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.3,
+          "6": 3.0,
+          "15": 2.3,
+          "16": 1.6
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.3,
+          "1": 2.4,
+          "12": 2.8,
+          "13": 2.8
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_2": {
+      "op_0": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.5,
+          "10": 1.8,
+          "14": 1.6,
+          "19": 1.5
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.0,
+          "1": 2.9,
+          "12": 1.9,
+          "13": 1.5
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.3,
+          "9": 1.8,
+          "11": 2.8,
+          "17": 2.9
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.5,
+          "6": 2.9,
+          "15": 1.7,
+          "16": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.8,
+          "5": 2.5,
+          "7": 2.2,
+          "18": 1.8
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_3": {
+      "op_0": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.8,
+          "6": 2.6,
+          "15": 1.3,
+          "16": 1.9
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.1,
+          "10": 1.6,
+          "14": 2.8,
+          "19": 1.2
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.6,
+          "1": 2.0,
+          "12": 2.7,
+          "13": 2.7
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.7,
+          "5": 1.5,
+          "7": 1.5,
+          "18": 2.9
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.5,
+          "9": 2.0,
+          "11": 1.0,
+          "17": 1.5
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_4": {
+      "op_0": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.8,
+          "5": 2.4,
+          "7": 1.0,
+          "18": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.8,
+          "10": 1.1,
+          "14": 2.6,
+          "19": 2.7
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.7,
+          "1": 1.0,
+          "12": 2.5,
+          "13": 2.5
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.5,
+          "9": 2.4,
+          "11": 2.2,
+          "17": 1.3
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.4,
+          "6": 1.3,
+          "15": 2.6,
+          "16": 2.4
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_5": {
+      "op_0": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.7,
+          "5": 2.1,
+          "7": 1.9,
+          "18": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.3,
+          "10": 1.7,
+          "14": 1.1,
+          "19": 2.1
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.2,
+          "6": 2.8,
+          "15": 2.6,
+          "16": 2.9
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.2,
+          "9": 1.3,
+          "11": 1.6,
+          "17": 2.2
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.7,
+          "1": 2.8,
+          "12": 1.4,
+          "13": 2.0
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_6": {
+      "op_0": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.9,
+          "1": 2.2,
+          "12": 2.9,
+          "13": 2.2
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.4,
+          "10": 1.5,
+          "14": 2.0,
+          "19": 2.2
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.9,
+          "9": 2.8,
+          "11": 1.1,
+          "17": 1.4
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.2,
+          "6": 1.5,
+          "15": 2.0,
+          "16": 1.4
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.5,
+          "5": 2.9,
+          "7": 2.0,
+          "18": 2.0
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_7": {
+      "op_0": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.4,
+          "10": 2.5,
+          "14": 2.3,
+          "19": 2.0
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.1,
+          "9": 1.6,
+          "11": 1.3,
+          "17": 1.9
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.3,
+          "5": 2.1,
+          "7": 2.1,
+          "18": 1.2
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.0,
+          "1": 1.7,
+          "12": 1.8,
+          "13": 1.0
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.8,
+          "6": 2.5,
+          "15": 1.7,
+          "16": 1.4
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_8": {
+      "op_0": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.4,
+          "5": 2.0,
+          "7": 1.0,
+          "18": 1.0
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 3.0,
+          "10": 1.8,
+          "14": 1.8,
+          "19": 1.6
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.6,
+          "1": 1.6,
+          "12": 2.0,
+          "13": 1.4
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.8,
+          "9": 2.8,
+          "11": 2.4,
+          "17": 1.4
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.4,
+          "6": 1.4,
+          "15": 1.6,
+          "16": 1.5
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_9": {
+      "op_0": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.0,
+          "5": 1.1,
+          "7": 1.9,
+          "18": 2.0
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.8,
+          "6": 1.8,
+          "15": 1.1,
+          "16": 1.1
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.2,
+          "10": 2.6,
+          "14": 1.4,
+          "19": 2.5
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.8,
+          "1": 2.1,
+          "12": 1.2,
+          "13": 1.9
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.1,
+          "9": 2.9,
+          "11": 2.2,
+          "17": 2.6
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_10": {
+      "op_0": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 3.0,
+          "6": 2.9,
+          "15": 1.9,
+          "16": 2.3
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.7,
+          "5": 2.3,
+          "7": 2.9,
+          "18": 2.7
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.9,
+          "10": 1.2,
+          "14": 1.0,
+          "19": 1.2
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.7,
+          "1": 2.1,
+          "12": 2.1,
+          "13": 2.1
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.3,
+          "9": 1.7,
+          "11": 3.0,
+          "17": 2.9
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_11": {
+      "op_0": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.7,
+          "5": 1.9,
+          "7": 2.8,
+          "18": 1.3
+        },
+        "is_preemptive": false
+      },
+      "op_1": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.5,
+          "6": 2.7,
+          "15": 1.8,
+          "16": 2.9
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.5,
+          "1": 2.5,
+          "12": 2.4,
+          "13": 2.8
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.1,
+          "10": 1.6,
+          "14": 2.2,
+          "19": 2.1
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 1.9,
+          "9": 2.1,
+          "11": 2.4,
+          "17": 2.7
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_12": {
+      "op_0": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.0,
+          "1": 1.8,
+          "12": 2.7,
+          "13": 1.7
+        },
+        "is_preemptive": false,
+        "ready_trigger": 0.55
+      },
+      "op_1": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.6,
+          "5": 2.1,
+          "7": 1.9,
+          "18": 1.9
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 2.1,
+          "10": 1.3,
+          "14": 1.5,
+          "19": 2.4
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.9,
+          "6": 2.2,
+          "15": 2.0,
+          "16": 1.4
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.4,
+          "9": 1.7,
+          "11": 2.0,
+          "17": 2.7
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_13": {
+      "op_0": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 2.7,
+          "1": 1.1,
+          "12": 2.9,
+          "13": 2.0
+        },
+        "is_preemptive": false,
+        "ready_trigger": 0.3
+      },
+      "op_1": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 2.7,
+          "5": 2.1,
+          "7": 3.0,
+          "18": 1.2
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.3,
+          "9": 1.7,
+          "11": 2.6,
+          "17": 1.3
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 1.2,
+          "6": 2.9,
+          "15": 1.7,
+          "16": 2.4
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.3,
+          "10": 2.1,
+          "14": 1.5,
+          "19": 1.5
+        },
+        "is_preemptive": false
+      }
+    },
+    "job_14": {
+      "op_0": {
+        "machine_candidates": [
+          4,
+          10,
+          14,
+          19
+        ],
+        "base_process_time": {
+          "4": 1.5,
+          "10": 1.2,
+          "14": 2.8,
+          "19": 1.5
+        },
+        "is_preemptive": false,
+        "ready_trigger": 0.71
+      },
+      "op_1": {
+        "machine_candidates": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "base_process_time": {
+          "3": 2.0,
+          "6": 1.7,
+          "15": 2.5,
+          "16": 2.1
+        },
+        "is_preemptive": false
+      },
+      "op_2": {
+        "machine_candidates": [
+          0,
+          1,
+          12,
+          13
+        ],
+        "base_process_time": {
+          "0": 1.9,
+          "1": 1.1,
+          "12": 2.8,
+          "13": 1.1
+        },
+        "is_preemptive": false
+      },
+      "op_3": {
+        "machine_candidates": [
+          8,
+          9,
+          11,
+          17
+        ],
+        "base_process_time": {
+          "8": 2.7,
+          "9": 1.8,
+          "11": 1.2,
+          "17": 1.8
+        },
+        "is_preemptive": false
+      },
+      "op_4": {
+        "machine_candidates": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "base_process_time": {
+          "2": 1.5,
+          "5": 2.8,
+          "7": 1.9,
+          "18": 2.3
+        },
+        "is_preemptive": false
+      }
+    }
+  }
+}
